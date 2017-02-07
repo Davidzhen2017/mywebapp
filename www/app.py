@@ -1,3 +1,10 @@
+# -*- coding:utf-8 -*-
+
+'webapp 骨架'
+
+__author__='David'
+
+#设置日志等级，默认为WARNING，只有指定级别或更高级别的才会被追踪记录
 import logging; logging.basicConfig(level=logging.INFO)
 
 import asyncio, os, json, time
