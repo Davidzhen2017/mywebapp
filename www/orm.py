@@ -287,6 +287,7 @@ class Model(dict, metaclass=ModelMetaclass):
             else:
                 raise ValueError("Invalid limit value: %s" % str(limit))
         rs = yield from select(' '.join(sql), args) #没有指定size,因此会fetchall
+        #print(rs)
         return [cls(**r) for r in rs]
 
     @classmethod
@@ -330,7 +331,7 @@ class Model(dict, metaclass=ModelMetaclass):
 #if __name__ == '__main__':
      
 #    class User(Model):
-#        # 定义类的属性到列的映射：
+        # 定义类的属性到列的映射：
 #        id = IntegerField('id',primary_key=True)
 #        name = StringField('username')
 #        email = StringField('email')
@@ -339,6 +340,6 @@ class Model(dict, metaclass=ModelMetaclass):
     # 创建一个实例：
 #    u = User(id=12345, name='peic', email='peic@python.org', password='password')
 #    print(u)
-#    # 保存到数据库：
+    # 保存到数据库：
 #    u.save()
 #    print(u)

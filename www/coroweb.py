@@ -11,7 +11,7 @@ from urllib import parse
 from aiohttp import web
 
 # apis.py是自己定义的
-from apis import APIError
+#from apis import APIError
 
 
 # 这是个装饰器，在handlers模块中被引用，其作用是给http请求添加请求方法和请求路径这两个属性

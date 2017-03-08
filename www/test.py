@@ -3,7 +3,7 @@ from models import User, Blog, Comment
 
 @asyncio.coroutine
 def test(loop):
-    yield from orm.create_pool(loop=loop,user='www-data', password='www-data', db='awesome')
+    yield from orm.create_pool(loop=loop,user='www-data', password='www-data', db='awesome1')
 
     u=User(name='test11',email='test11@test.com',passwd='test',image='about:blank')
 
